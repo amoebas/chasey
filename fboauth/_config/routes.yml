@@ -1,0 +1,6 @@
+---
+Name: fbroutes
+---
+Director:
+  rules:
+    'fb/$Action':  'FacebookOAuthController'
