@@ -4,3 +4,4 @@ Name: chaseroutes
 Director:
   rules:
     '':  'RootURLController'
+    'player/$Action/$ID' : 'RootURLController'

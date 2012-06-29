@@ -106,3 +106,8 @@ p.intro {
     margin-right: auto;
     display: block;
 }
+
+.typography .tagged {
+	color: #00f;
+	
+}

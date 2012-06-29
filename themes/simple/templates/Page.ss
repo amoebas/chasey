@@ -37,7 +37,7 @@ Change it, enhance it and most importantly enjoy it!
 		</p>
 	<% else %>
 		<p>
-			<a href ="$FacebookLoginLink">Login with facebook</a>
+			<a href ="$FacebookLoginLink">Login with facebook to play!</a>
 		</p>
 	<% end_if %>
 		$Layout
