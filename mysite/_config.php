@@ -20,17 +20,19 @@ i18n::set_locale('en_US');
 // Enable nested URLs for this site (e.g. page/sub-page/)
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
 
-FacebookConnect::set_app_id(getenv('FACEBOOK_APP_ID'));
-FacebookConnect::set_api_secret(getenv('FACEBOOK_APP_SECRET'));
-FacebookConnect::set_lang('en_US');
+FacebookOAuthController::set_app_id(getenv('FACEBOOK_APP_ID'));
+FacebookOAuthController::set_api_secret(getenv('FACEBOOK_APP_SECRET'));
 
 global $databaseConfig;
+$databaseConfig['type'] = 'MySQLDatabase';
+
 // Support for Environment configuration
 if(getenv('MYSQL_DB_HOST')) {
-	$databaseConfig['type'] = 'MySQLDatabase';
 	$databaseConfig['server'] = getenv('MYSQL_DB_HOST');
 	$databaseConfig['username'] = getenv('MYSQL_USERNAME');
 	$databaseConfig['password'] = getenv('MYSQL_PASSWORD');
 	$databaseConfig['database'] = getenv('MYSQL_DB_NAME');
 	
 }
+
+Object::add_extension('Member', 'ChaseyMember');

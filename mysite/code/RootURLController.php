@@ -7,4 +7,11 @@ class RootURLController extends Controller {
 		$this->Content = 'A facebook connected game of tag.';
 		return $this->renderWith(array('Page'));
 	}
+	
+	/**
+	 * @return array
+	 */
+	public function getFriends() {
+		return Member::currentUser()->Friends();
+	}
 }

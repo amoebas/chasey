@@ -31,6 +31,15 @@ Change it, enhance it and most importantly enjoy it!
 <% include Header %>
 <div class="main" role="main">
 	<div class="inner">
+	<% if CurrentFacebookMember %>
+		<p>
+			<a href="$FacebookLogoutLink">Logout</a> Your are logged in as $CurrentFacebookMember.FirstName
+		</p>
+	<% else %>
+		<p>
+			<a href ="$FacebookLoginLink">Login with facebook</a>
+		</p>
+	<% end_if %>
 		$Layout
 	</div>
 </div>
